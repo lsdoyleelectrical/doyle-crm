@@ -382,10 +382,10 @@ var fergusKey = loadStr(SK.fkey);
 // ═══════════════════════════════
 // FERGUS API
 // ═══════════════════════════════
-var FERGUS_BASE = 'https://api.fergus.com/api/v1';
+var FERGUS_BASE = 'https://fergus-proxy.onrender.com/fergus';
 
 function fergusHeaders() {
-  return {'Authorization': 'Bearer ' + fergusKey, 'Content-Type': 'application/json', 'Accept': 'application/json'};
+  return {'x-fergus-key': fergusKey, 'Content-Type': 'application/json', 'Accept': 'application/json'};
 }
 
 // Map Fergus day-of-week to our day names
